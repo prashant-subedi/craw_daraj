@@ -1,3 +1,4 @@
+
 import requests
 from bs4 import  BeautifulSoup
 url = "https://www.daraz.com.np/smartphones/"
@@ -10,7 +11,9 @@ import django
 os.environ["DJANGO_SETTINGS_MODULE"] = 'daraj.settings'
 django.setup()
 from  crawl.models import  ProductDetails
+#Clearing The DB
 
+ProductDetails.objects.all().delete()
 
 while(True):
 
